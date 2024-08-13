@@ -9,7 +9,6 @@ const Preview = ({ cropperData, videoRef }) => {
 
     const captureFrame = () => {
       if (videoRef.current && cropperData.width && cropperData.height) {
-
         const { videoWidth, videoHeight } = videoRef.current.getInternalPlayer();
         const scaleWidth = videoWidth / videoRef.current.wrapper.clientWidth;
         const scaleHeight = videoHeight / videoRef.current.wrapper.clientHeight;
@@ -28,7 +27,6 @@ const Preview = ({ cropperData, videoRef }) => {
           canvasRef.current.width,
           canvasRef.current.height
         );
-
       }
       animationFrameId = requestAnimationFrame(captureFrame);
     };
