@@ -1,7 +1,7 @@
 export const generateJSON = (recordedData) => {
     return JSON.stringify(recordedData, null, 2);
   };
-
+  
   export const downloadJSON = (jsonData) => {
     const blob = new Blob([jsonData], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -13,4 +13,4 @@ export const generateJSON = (recordedData) => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-
+  
